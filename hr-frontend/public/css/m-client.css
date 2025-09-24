@@ -1,0 +1,11 @@
+.card-img-top {
+    height: 200px;
+}
+
+/* public/css/m-client.css */
+
+.banner-img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
