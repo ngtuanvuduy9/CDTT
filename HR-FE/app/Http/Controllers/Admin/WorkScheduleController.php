@@ -149,6 +149,10 @@ class WorkScheduleController extends Controller
             if (isset($workSchedule['data'])) {
                 $workSchedule = $workSchedule['data'];
             }
+            // Đảm bảo work_date có định dạng đúng cho input date
+            if (isset($workSchedule['work_date'])) {
+                $workSchedule['work_date'] = date('Y-m-d', strtotime($workSchedule['work_date']));
+            }
             $employees = Http::withToken($token)->get($apiUrl . '/api/admin/employees')->json() ?? [];
             if (isset($employees['data'])) {
                 $employees = $employees['data'];

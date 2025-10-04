@@ -56,7 +56,8 @@
                                         class="text-danger">*</span></label>
                                 <input type="date" class="form-control @error('work_date') is-invalid @enderror"
                                     id="work_date" name="work_date"
-                                    value="{{ old('work_date', $workSchedule['work_date'] ?? '') }}" required>
+                                    value="{{ old('work_date', isset($workSchedule['work_date']) ? date('Y-m-d', strtotime($workSchedule['work_date'])) : '') }}"
+                                    required>
                                 @error('work_date')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -119,4 +120,28 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Đảm bảo input date có giá trị đúng định dạng
+            const workDateInput = document.getElementById('work_date');
+            if (workDateInput && workDateInput.value) {
+                // Kiểm tra và format lại nếu cần
+                const currentValue = workDateInput.value;
+                try {
+                    const date = new Date(currentValue);
+                    if (!isNaN(date.getTime())) {
+                        const year = date.getFullYear();
+                        const month = String(date.getMonth() + 1).padStart(2, '0');
+                        const day = String(date.getDate()).padStart(2, '0');
+                        workDateInput.value = `${year}-${month}-${day}`;
+                    }
+                } catch (e) {
+                    console.log('Date format error:', e);
+                }
+            }
+        });
+    </script>
 @endsection
