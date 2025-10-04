@@ -1,0 +1,45 @@
+/* Bảng nhân viên */
+.table-employees td,
+.table-employees th {
+    vertical-align: middle;
+    /* canh giữa theo chiều dọc */
+}
+
+/* Các cột cần cố định chiều rộng + không xuống dòng */
+.table-employees td.code,
+.table-employees td.gender,
+.table-employees td.dob,
+.table-employees td.hired_date,
+.table-employees td.actions {
+    white-space: nowrap;
+}
+
+/* Cột chữ dài (email, tên, địa chỉ) */
+.table-employees td.fullname,
+.table-employees td.email,
+.table-employees td.address {
+    max-width: 150px;
+    /* chỉnh theo ý muốn */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Cột địa chỉ cho phép xuống dòng hợp lý */
+.table-employees td.address {
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* Ảnh nhân viên nhỏ gọn */
+.table-employees td.photo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Responsive: table cuộn ngang nếu màn hình nhỏ */
+.table-responsive {
+    overflow-x: auto;
+}
