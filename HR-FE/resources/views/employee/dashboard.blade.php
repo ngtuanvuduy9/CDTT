@@ -62,9 +62,9 @@
                                             class="info-value">{{ $employee['username'] ?? '' }}</span></div>
                                     <div><span class="info-label"><i class="fas fa-user me-1"></i> Họ tên:</span> <span
                                             class="info-value">{{ $employee['name'] ?? '' }}</span></div>
-                                    <div><span class="info-label"><i class="fas fa-venus-mars me-1"></i> Giới tính:</span>
+                                    {{-- <div><span class="info-label"><i class="fas fa-venus-mars me-1"></i> Giới tính:</span>
                                         <span class="info-value">{{ $employee['gender'] ?? '' }}</span>
-                                    </div>
+                                    </div> --}}
                                     <div><span class="info-label"><i class="fas fa-birthday-cake me-1"></i> Ngày
                                             sinh:</span> <span class="info-value">{{ $employee['birth_date'] ?? '' }}</span>
                                     </div>
@@ -84,8 +84,8 @@
                                             class="info-value">{{ $employee['qualification'] ?? '' }}</span></div>
                                 </div>
                             </div>
-                            <a href="#" class="small text-primary mt-2 d-inline-block"><i
-                                    class="fas fa-info-circle me-1"></i> Xem chi tiết</a>
+                            {{-- <a href="#" class="small text-primary mt-2 d-inline-block"><i
+                                    class="fas fa-info-circle me-1"></i> Xem chi tiết</a> --}}
                         </div>
                     </div>
                 </div>
