@@ -29,8 +29,8 @@
                         </div>
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <p><i class="fas fa-envelope me-2 text-secondary"></i><strong>Email:</strong>
-                                    {{ $employee['email'] ?? ($employee->email ?? '') }}</p>
+                                {{-- <p><i class="fas fa-envelope me-2 text-secondary"></i><strong>Email:</strong>
+                                    {{ $employee['email'] ?? ($employee->email ?? '') }}</p> --}}
                                 <p><i class="fas fa-calendar me-2 text-secondary"></i><strong>Ngày sinh:</strong>
                                     {{ $employee['birth_date'] ?? ($employee->birth_date ?? '') }}</p>
                                 <p><i class="fas fa-id-card me-2 text-secondary"></i><strong>CCCD:</strong>

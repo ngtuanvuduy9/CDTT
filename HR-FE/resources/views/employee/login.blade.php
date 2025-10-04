@@ -72,7 +72,8 @@
                 @csrf
                 <div class="mb-3 input-group">
                     <span class="input-group-text"><i class="fas fa-id-badge"></i></span>
-                    <input type="text" class="form-control" name="code" placeholder="Mã nhân viên" required autofocus>
+                    <input type="text" class="form-control" name="code" placeholder="Tên đăng nhập" required
+                        autofocus>
                 </div>
                 <div class="mb-3 input-group">
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>
